@@ -9,6 +9,7 @@ apt-get update
 apt-get install -y --no-install-recommends \
     bzip2 \
     ca-certificates \
+    git \
     wget
 rm -rf /var/lib/apt/lists/*
 
