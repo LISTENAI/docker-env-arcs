@@ -11,6 +11,7 @@ apt-get install -y --no-install-recommends \
     ca-certificates \
     git \
     git-lfs \
+    python3 \
     wget
 rm -rf /var/lib/apt/lists/*
 
