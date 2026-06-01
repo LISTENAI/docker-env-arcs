@@ -39,9 +39,13 @@ set -eux
 apt-get update
 apt-get install -y --no-install-recommends \
     ca-certificates \
+    cmake \
     git \
     git-lfs \
-    python3
+    make \
+    ninja-build \
+    python3 \
+    xxd
 rm -rf /var/lib/apt/lists/*
 EOF
 
