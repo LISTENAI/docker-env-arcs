@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:24.04 AS toolchain
+FROM ubuntu:22.04 AS toolchain
 
 RUN <<EOF
 set -eux
@@ -16,7 +16,7 @@ rm /tmp/nuclei_riscv_newlibc_prebuilt_linux64_2025.02.tar.bz2
 EOF
 
 
-FROM ubuntu:24.04 AS tools
+FROM ubuntu:22.04 AS tools
 
 RUN <<EOF
 set -eux
@@ -32,7 +32,7 @@ rm /tmp/listenai-tools.tar.gz
 EOF
 
 
-FROM ubuntu:24.04
+FROM ubuntu:22.04
 
 RUN <<EOF
 set -eux
@@ -42,6 +42,8 @@ apt-get install -y --no-install-recommends \
     cmake \
     git \
     git-lfs \
+    libncursesw5 \
+    libtinfo5 \
     make \
     ninja-build \
     python3 \
